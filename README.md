@@ -11,15 +11,16 @@ Result: there will be created the following folder structure:
 * .\reports\%timestamp%\dashboard - contains html-report (index.html)
 
 Test Plan structure:
-User Defined Variables:  
-    * BASE_USERNAME - HTTP basic authentication username  
-    * BASE_PASSWORD - HTTP basic authentication password
+- User Defined Variables:  
+    - BASE_USERNAME - HTTP basic authentication username  
+    - BASE_PASSWORD - HTTP basic authentication password
+
 - HTTP Request Defaults:  
     Contains server name and HTTP Request path for all requests
 
 - Thread Group  
-    Number of Threads (users) : ${__P(threads)} - can be passed as cmd-argument
-    Loop Count:                 ${__P(loops)}   - can be passed as cmd-argument
+    Number of Threads (users) : ${__P(threads)} - can be passed as cmd-argument  
+    Loop Count:                 ${__P(loops)}   - can be passed as cmd-argument  
 
     - Random Variable:  
         PREFIX - need for generating usernames and email addresses
@@ -51,7 +52,8 @@ User Defined Variables:
                 - Extract USER_NAME
                 - Extract EMAIL
             - Set properties (BeanShell Assertion) 
-                Need to set extracted variables to properties (to make them visible for all threads). Actually it doesn't requiered for the particular tests, but I decided to keep them just in case of future needs.
+                Need to set extracted variables to properties (to make them visible for all threads).  
+                Actually it doesn't requiered for the particular tests, but I decided to keep them just in case of future needs.
 
     - Player authorization (simple controller)
         - HTTP Header Manager  
