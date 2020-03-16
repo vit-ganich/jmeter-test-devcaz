@@ -1,7 +1,7 @@
 # jmeter-test-task
 - [Instruction](#instruction)
-- [Test Plan structure:](#test-plan-structure-)
-- [Issues for *test-api.d6.dev.devcaz.com*](#issues-for--test-apid6devdevcazcom-)
+- [Test Plan structure](#test-plan-structure)
+- [Issues for api under test](#issues-for-api-under-test)
 
 ## Instruction
 1. Install JMeter (https://jmeter.apache.org/download_jmeter.cgi)
@@ -13,7 +13,7 @@ Result: there will be created the following folder structure:
     - .\reports\%timestamp% - contains output.csv with test results
     - .\reports\%timestamp%\dashboard - contains html-report (index.html)
 
-## Test Plan structure:
+## Test Plan structure
 - User Defined Variables:  
     - *BASE_USERNAME* - HTTP basic authentication username  
     - *BASE_PASSWORD* - HTTP basic authentication password
@@ -98,7 +98,7 @@ Result: there will be created the following folder structure:
                 Get request to fetch sorted list with all created games  
             - Assert response code is OK  
 
-# Issues for *test-api.d6.dev.devcaz.com*
+## Issues for api under test
 1. Register a new player *POST /v2/players HTTP/1.1* can be performed without *currency_code* parameter  
     - Expected result: *currency_code* parameter can be sent: string, required, default currency code according to ISO4217
     - Actual result: error "Invalid currency_code". Player can be created without *currency_code* parameter
