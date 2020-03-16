@@ -107,4 +107,8 @@ Result: there will be created the following folder structure:
     - Actual result: response contains an empty list  
     The same issue for *GET /v2/games?sort=name* - the empty list is retrieved.     
     The request *GET /v2/games/${GAME_ID}* returns an error - there is no games created.   
+3. Get all players *GET /v2/players* retrieves information only for the last created user.
+    - Expected result: *GET /v2/players* retrieves a users list
+    - Actual result: response contains only one user (the last created). Some of the tests fail due to this error.
+    - Error example: {"name":"Not Found","message":"Object not found: 6041","code":0,"status":404}
     
