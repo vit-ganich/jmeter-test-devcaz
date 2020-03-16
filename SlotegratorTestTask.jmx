@@ -233,7 +233,7 @@ vars.put(&quot;PASSWORD_ENCODED&quot;,new String(encodedPassword));</stringProp>
               <boolProp name="JSONPostProcessor.compute_concat">true</boolProp>
             </JSONPostProcessor>
             <hashTree/>
-            <BeanShellAssertion guiclass="BeanShellAssertionGui" testclass="BeanShellAssertion" testname="BeanShell Assertion" enabled="true">
+            <BeanShellAssertion guiclass="BeanShellAssertionGui" testclass="BeanShellAssertion" testname="Set properties" enabled="true">
               <stringProp name="TestPlan.comments">Set variables visible for all threads</stringProp>
               <stringProp name="BeanShellAssertion.query">${__setProperty(USER_ID,${USER_ID})}
 ${__setProperty(USER_NAME,${USER_NAME})}
@@ -244,7 +244,7 @@ ${__setProperty(EMAIL,${EMAIL})}</stringProp>
             </BeanShellAssertion>
             <hashTree/>
           </hashTree>
-          <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="Debug Sampler" enabled="true">
+          <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="Debug Sampler" enabled="false">
             <boolProp name="displayJMeterProperties">true</boolProp>
             <boolProp name="displayJMeterVariables">true</boolProp>
             <boolProp name="displaySystemProperties">false</boolProp>
@@ -313,7 +313,7 @@ ${__setProperty(EMAIL,${EMAIL})}</stringProp>
               <boolProp name="JSONPostProcessor.compute_concat">true</boolProp>
             </JSONPostProcessor>
             <hashTree/>
-            <BeanShellAssertion guiclass="BeanShellAssertionGui" testclass="BeanShellAssertion" testname="BeanShell Assertion" enabled="true">
+            <BeanShellAssertion guiclass="BeanShellAssertionGui" testclass="BeanShellAssertion" testname="Set property ACCESS_TOKEN" enabled="true">
               <stringProp name="TestPlan.comments">Set variables visible for all threads</stringProp>
               <stringProp name="BeanShellAssertion.query">${__setProperty(ACCESS_TOKEN,${ACCESS_TOKEN})}</stringProp>
               <stringProp name="BeanShellAssertion.filename"></stringProp>
@@ -322,7 +322,7 @@ ${__setProperty(EMAIL,${EMAIL})}</stringProp>
             </BeanShellAssertion>
             <hashTree/>
           </hashTree>
-          <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="Debug Sampler" enabled="true">
+          <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="Debug Sampler" enabled="false">
             <boolProp name="displayJMeterProperties">false</boolProp>
             <boolProp name="displayJMeterVariables">true</boolProp>
             <boolProp name="displaySystemProperties">false</boolProp>
@@ -349,7 +349,7 @@ ${__setProperty(EMAIL,${EMAIL})}</stringProp>
           <hashTree/>
           <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="Get all players" enabled="true">
             <boolProp name="LoopController.continue_forever">true</boolProp>
-            <stringProp name="LoopController.loops">20</stringProp>
+            <stringProp name="LoopController.loops">10</stringProp>
           </LoopController>
           <hashTree>
             <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GET Get all players" enabled="true">
@@ -451,7 +451,7 @@ if (failureMessage?.trim()) {
               </JSR223Assertion>
               <hashTree/>
             </hashTree>
-            <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="Debug Sampler" enabled="true">
+            <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="Debug Sampler" enabled="false">
               <boolProp name="displayJMeterProperties">false</boolProp>
               <boolProp name="displayJMeterVariables">true</boolProp>
               <boolProp name="displaySystemProperties">false</boolProp>
@@ -464,7 +464,7 @@ if (failureMessage?.trim()) {
             <stringProp name="LoopController.loops">10</stringProp>
           </LoopController>
           <hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Get games" enabled="true">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GET Get games" enabled="true">
               <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
                 <collectionProp name="Arguments.arguments"/>
               </elementProp>
