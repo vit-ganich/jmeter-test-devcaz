@@ -6,9 +6,9 @@
 3. Clone the repository, open the repo folder
 4. Launch run.cmd
 Result: there will be created the following folder structure:
-* .\reports
-* .\reports\%timestamp% - contains output.csv with test results
-* .\reports\%timestamp%\dashboard - contains html-report (index.html)
+    - .\reports
+    - .\reports\%timestamp% - contains output.csv with test results
+    - .\reports\%timestamp%\dashboard - contains html-report (index.html)
 
 Test Plan structure:
 - User Defined Variables:  
