@@ -1,19 +1,19 @@
 # jmeter-test-task
 
 # Instruction
-### 1. Install JMeter (https://jmeter.apache.org/download_jmeter.cgi)
-### 2. Add %jmeter_folder%/bin to PATH
-### 3. Clone the repository, open the repo folder
-### 4. Launch run.cmd
-### Result: there will be created the following folder structure:
-#### .\reports
-#### .\reports\%timestamp% - contains output.csv with test results
-#### .\reports\%timestamp%\dashboard - contains html-report (index.html)
+1. Install JMeter (https://jmeter.apache.org/download_jmeter.cgi)
+2. Add %jmeter_folder%/bin to PATH
+3. Clone the repository, open the repo folder
+4. Launch run.cmd
+Result: there will be created the following folder structure:
+* .\reports
+* .\reports\%timestamp% - contains output.csv with test results
+* .\reports\%timestamp%\dashboard - contains html-report (index.html)
 
 Test Plan structure:
-- User Defined Variables:
-    BASE_USERNAME - HTTP basic authentication username
-    BASE_PASSWORD - HTTP basic authentication password
+User Defined Variables:  
+    * BASE_USERNAME - HTTP basic authentication username  
+    * BASE_PASSWORD - HTTP basic authentication password
 - HTTP Request Defaults:
     Contains server name and HTTP Request path for all requests
 
