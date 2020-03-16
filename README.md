@@ -1,6 +1,6 @@
 # jmeter-test-task
 
-# Instruction
+## Instruction
 1. Install JMeter (https://jmeter.apache.org/download_jmeter.cgi)
 2. Add *%jmeter_folder%/bin* to PATH
 3. Clone the repository, open the repo folder
@@ -10,7 +10,7 @@ Result: there will be created the following folder structure:
     - .\reports\%timestamp% - contains output.csv with test results
     - .\reports\%timestamp%\dashboard - contains html-report (index.html)
 
-Test Plan structure:
+## Test Plan structure:
 - User Defined Variables:  
     - *BASE_USERNAME* - HTTP basic authentication username  
     - *BASE_PASSWORD* - HTTP basic authentication password
@@ -43,7 +43,7 @@ Test Plan structure:
         - HTTP Header Manager  
             Need for Authorization Bearer with *${ACCESS_TOKEN}*
         - POST Register a new player  
-            /v2/players  
+            */v2/players*  
             - Body Data:  
                 There is used *${PREFIX} + ${__time()}* combination to avoid duplicates
             - Assert response code is 201
@@ -88,3 +88,20 @@ Test Plan structure:
                 */v2/games*  
                 Get request to fetch information about all created games  
             - Assert response code is OK  
+        - Get games list with sorting (loop controller)  
+            Loops Count: 10  
+            - GET Get games  
+                */v2/games?sort=name*  
+                Get request to fetch sorted list with all created games  
+            - Assert response code is OK  
+
+# Issues for *test-api.d6.dev.devcaz.com*
+1. Register a new player *POST /v2/players HTTP/1.1* can be performed without *currency_code* parameter  
+    - Expected result: *currency_code* parameter can be sent: string, required, default currency code according to ISO4217
+    - Actual result: error "Invalid currency_code". Player can be created without *currency_code* parameter
+2. Get games list *GET /v2/games/* returns an empty list  
+    - Expected result: *GET /v2/games* retrieving a games collction
+    - Actual result: response contains an empty list  
+    The same issue for *GET /v2/games?sort=name* - the empty list is retrieved.     
+    The request *GET /v2/games/${GAME_ID}* returns an error - there is no games created.   
+    
