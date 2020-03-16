@@ -10,4 +10,4 @@ set _timestamp=%mydate: =_%_%mytime%
 mkdir reports\%_timestamp%\dashboard
 
 :: Run jmeter tests
-jmeter -n --testfile SlotegratorTestTask.jmx -Jthreads=10 -l reports/%_timestamp%/output.csv -e -o reports/%_timestamp%/dashboard
+jmeter -n --testfile test-api.devcaz.com-test-plan.jmx -Jthreads=10 -l reports/%_timestamp%/output.csv -e -o reports/%_timestamp%/dashboard
