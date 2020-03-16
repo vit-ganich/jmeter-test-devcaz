@@ -7,7 +7,7 @@
 1. Install JMeter (https://jmeter.apache.org/download_jmeter.cgi)
 2. Add *%jmeter_folder%/bin* to PATH
 3. Clone the repository, open the repo folder
-4. Launch run.cmd
+4. Launch run.cmd  
 Result: there will be created the following folder structure:
     - .\reports
     - .\reports\%timestamp% - contains output.csv with test results
