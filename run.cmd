@@ -9,5 +9,5 @@ set _timestamp=%mydate: =_%_%mytime%
 :: Create folder with timestamp
 mkdir reports\%_timestamp%\dashboard
 
-:: Rum jmeter tests
+:: Run jmeter tests
 jmeter -n --testfile SlotegratorTestTask.jmx -Jthreads=10 -l reports/%_timestamp%/output.csv -e -o reports/%_timestamp%/dashboard
