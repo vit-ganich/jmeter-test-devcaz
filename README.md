@@ -100,15 +100,15 @@ Result: there will be created the following folder structure:
 
 ## Issues for api under test
 1. Register a new player *POST /v2/players HTTP/1.1* can be performed without *currency_code* parameter  
-    - Expected result: *currency_code* parameter can be sent: string, required, default currency code according to ISO4217
-    - Actual result: error "Invalid currency_code". Player can be created without *currency_code* parameter
-2. Get games list *GET /v2/games/* returns an empty list  
-    - Expected result: *GET /v2/games* retrieving a games collction
-    - Actual result: response contains an empty list  
+    - **Expected result**: *currency_code* parameter can be sent: string, required, default currency code according to ISO4217
+    - **Actual result: error** "Invalid currency_code". Player can be created without *currency_code* parameter
+2. Get games list *GET /v2/games/* returns an **empty list**  
+    - **Expected result**: *GET /v2/games* retrieving a games collction
+    - **Actual result**: response contains an **empty list**  
     The same issue for *GET /v2/games?sort=name* - the empty list is retrieved.     
     The request *GET /v2/games/${GAME_ID}* returns an error - there is no games created.   
-3. Get all players *GET /v2/players* retrieves information only for the last created user.
-    - Expected result: *GET /v2/players* retrieves a users list
-    - Actual result: response contains only one user (the last created). Some of the tests fail due to this error.
-    - Error example: {"name":"Not Found","message":"Object not found: 6041","code":0,"status":404}
+3. Get all players *GET /v2/players* retrieves information only for the **last created user**.
+    - **Expected result**: *GET /v2/players* retrieves a users list
+    - **Actual result**: response contains only one user (the last created). Some of the tests fail due to this error.
+    - Error example: *{"name":"Not Found","message":"Object not found: 6041","code":0,"status":404}*
     
